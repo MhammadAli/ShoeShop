@@ -9,11 +9,12 @@
             name="shoe_item"
             type="com.example.shoeshop.models.Shoe" />
     </data>
+    <!--        A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way.-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+<!--        CardView is a new widget in Android that can be used to display any sort of data by providing a rounded corner layout along with a specific elevation-->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="0dp"
@@ -24,6 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+            <!--        A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way.-->
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

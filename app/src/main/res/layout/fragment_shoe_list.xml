@@ -9,6 +9,7 @@
             name="shoe"
             type="com.example.shoeshop.models.Shoe" />
     </data>
+    <!--        A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way.-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
