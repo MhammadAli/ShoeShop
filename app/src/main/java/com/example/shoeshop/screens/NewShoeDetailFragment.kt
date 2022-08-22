@@ -25,7 +25,7 @@ class NewShoeDetailFragment : Fragment() {
 
         // Inflate the layout for this fragment
         binding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_new_shoe_detail, container, false)
+            FragmentNewShoeDetailBinding.inflate(inflater,  container, false)
         binding.cancelButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_newShoeDetailFragment_to_shoeListFragment))
 
         binding.saveButton.setOnClickListener {

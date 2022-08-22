@@ -28,9 +28,10 @@ class ShoeListFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
-        binding.lifecycleOwner = this
+        binding = FragmentShoeListBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(requireActivity())[MainActivityViewModel::class.java]
+        binding.shoe = viewModel
+        binding.lifecycleOwner = this
         binding.addButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_newShoeDetailFragment))
         setHasOptionsMenu(true)
         viewModel.shoes.observe(viewLifecycleOwner, Observer { newShoe ->

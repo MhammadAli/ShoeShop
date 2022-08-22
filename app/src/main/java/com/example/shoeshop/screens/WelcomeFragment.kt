@@ -19,7 +19,7 @@ lateinit var binding:FragmentWelcomeBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome,container,false)
+        binding = FragmentWelcomeBinding.inflate(inflater, container,false)
         binding.getStartButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_instructionFragment))
         return binding.root
     }
