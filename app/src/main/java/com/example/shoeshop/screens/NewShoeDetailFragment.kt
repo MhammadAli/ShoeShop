@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import com.example.shoeshop.view_model.MainActivityViewModel
@@ -25,22 +26,16 @@ class NewShoeDetailFragment : Fragment() {
 
         // Inflate the layout for this fragment
         binding =
-            FragmentNewShoeDetailBinding.inflate(inflater,  container, false)
+            FragmentNewShoeDetailBinding.inflate(inflater, container, false)
         binding.cancelButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_newShoeDetailFragment_to_shoeListFragment))
+        binding.viewMod = viewModel
 
         binding.saveButton.setOnClickListener {
-            val name = binding.shoeNameEditText.text.toString()
-            val size = binding.shoeSizeEditText.text.toString()
-            val company = binding.shoeCompanyEditText.text.toString()
-            val description = binding.shoeDescriptionEditText.text.toString()
-            viewModel.addShoes(
-                name,
-                size,
-                company,
-                description
-            )
 
-            Log.i("ShoeDetails", viewModel.shoes.value.toString())
+            Log.i("ShoeDetails name------>", viewModel.shoeName.value.toString())
+
+            viewModel.addShoes()
+
             val action =
                 com.example.shoeshop.screens.NewShoeDetailFragmentDirections.actionNewShoeDetailFragmentToShoeListFragment()
             findNavController(this).navigate(action)

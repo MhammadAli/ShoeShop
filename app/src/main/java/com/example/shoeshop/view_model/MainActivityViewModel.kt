@@ -1,18 +1,20 @@
 package com.example.shoeshop.view_model
 
 import android.util.Log
+import androidx.databinding.Bindable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoeshop.models.Shoe
 
 class MainActivityViewModel : ViewModel() {
+
     val shoeName = MutableLiveData<String>()
     val shoeSize = MutableLiveData<String>()
     val shoeCompany = MutableLiveData<String>()
     val shoeDescription = MutableLiveData<String>()
 
-     var shoes = MutableLiveData<MutableList<Shoe>>()
+    var shoes = MutableLiveData<MutableList<Shoe>>()
 
 //    val shoes: LiveData<MutableList<Shoe>>
 
@@ -29,12 +31,19 @@ class MainActivityViewModel : ViewModel() {
 
     }
 
-    fun addShoes(name: String, size: String, company: String, description: String) {
-        Log.i("Add new shoes", "addShoes:name $name company $company size $size,desc $description")
+    fun addShoes() {
+//        Log.i("Add new shoes", "addShoes:name $name company $company size $size,desc $description")
 
-        shoes.value?.add(Shoe(name, size, company, description))
+        shoes.value?.add(
+            Shoe(
+                shoeName.value.toString(),
+                shoeSize.value.toString(),
+                shoeCompany.value.toString(),
+                shoeDescription.value.toString()
+            )
+        )
 
-        Log.i("size---->", "addShoes: size of shoes is ${shoes.value?.size}")
+        Log.i("name---->", "addShoes: naaaame of shoes is ${shoeName.toString()}")
 
     }
 

@@ -3,6 +3,7 @@ package com.example.shoeshop.screens
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -42,6 +43,7 @@ class ShoeListFragment : Fragment() {
 
 
         })
+
 
         Log.i("Shoe List", viewModel.shoes.value.toString())
         return binding.root

@@ -7,7 +7,7 @@
 
         <variable
             name="shoe_item"
-            type="com.example.shoeshop.models.Shoe" />
+            type="com.example.shoeshop.view_model.MainActivityViewModel" />
     </data>
     <!--        A ConstraintLayout is a ViewGroup which allows you to position and size widgets in a flexible way.-->
 
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="name"
+                    android:text="name}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="25dp"

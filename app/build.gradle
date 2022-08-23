@@ -32,13 +32,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-}
-android {
+
+
     buildFeatures {
         dataBinding true
     }
-}
 
+
+}
 dependencies {
     def nav_version = "2.5.1"
     def lifecycle_version = "2.6.0-alpha01"
